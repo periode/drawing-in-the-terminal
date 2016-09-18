@@ -1,17 +1,16 @@
-# builtin packages
-from sys import stdout
 from time import sleep
-
+from sys import stdout
 import random
+import noise
 
-#additional packages > install using pip install <NAMEOFPACKAGE>
 from blessings import Terminal
-
-interval = 0.001
 
 term = Terminal()
 width = term.width
 height = term.height
+
+noise_step = 0
+
 
 #helper function
 #credit due to Adam Luchjenbroers on StackOverflow <3
@@ -27,17 +26,22 @@ def map(value, leftMin, leftMax, rightMin, rightMax):
     return rightMin + (valueScaled * rightSpan)
 
 
-def line_drawing():
-    while True:
-        my_line = "-"
-        for x in range(0, width-2):
+while True:
+    my_line = ""
+    noise_value = noise.pnoise1(noise_step, 1)
+    mapped_value = int(map(noise_value, -1, 1, 0, width))
+    mapped_value_width = int(map(noise_value*10, -5, 5, 0, 10))
+
+
+    for x in range (0, width):
+        if x > mapped_value-mapped_value_width and x < mapped_value+mapped_value_width:
+            my_line += "|"
+        else:
             my_line += " "
-        my_line += "-"
-        sleep(0.1)
-        print(term.on_color(random.randint(0, 15))+my_line)
+
+    print(my_line)
 
 
-try:
-    line_drawing()
-except KeyboardInterrupt:
-    print(term.normal+"bye!")
+    noise_step += 0.01
+    stdout.flush()
+    sleep(0.01)

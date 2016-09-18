@@ -2,6 +2,7 @@
 from sys import stdout
 from time import sleep
 import random
+import os
 
 #additional packages > install using pip install <NAMEOFPACKAGE>
 import noise
@@ -19,6 +20,9 @@ column_spacing = 7
 for x in range (0, int(width/column_spacing)):
     possible_locations_columns.append(x*column_spacing)
 
+# get_rid_of_top_line = ""
+os.system("clear")
+
 def random_move_drawing():
     while True:
         with term.location(possible_locations_columns[random.randint(0, len(possible_locations_columns)-1)], random.randint(1, height-2)):
@@ -29,4 +33,4 @@ def random_move_drawing():
 try:
     random_move_drawing()
 except KeyboardInterrupt:
-    print("bye!")
+    print(term.green+"bye!")
