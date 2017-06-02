@@ -33,4 +33,4 @@ def random_move_drawing():
 try:
     random_move_drawing()
 except KeyboardInterrupt:
-    print(term.green+"bye!")
+    print(term.white+"bye!")

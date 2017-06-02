@@ -46,7 +46,7 @@ def palette_drawing():
     while True:
         for x in range(0, width-2):
             col = map(x, 0, width-2, 0, 15)
-            print(term.color(int(col))+"-", end="")
+            print(term.color(int(col))+"/", end="")
             stdout.flush()
             sleep(0.0001)
 

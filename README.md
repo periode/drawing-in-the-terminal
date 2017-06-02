@@ -1,5 +1,5 @@
 # drawing-in-the-terminal
-Repository for the NYUAD Interactive Media Workshop on September 18th
+Repository for the Drawing in the Terminal workshop at NYU 
 
 
 ### Topics
@@ -10,6 +10,9 @@ Later on, when computers democratized, amateur programmers started messing aroun
 
 The limitation of tools has always been one avenue for developing both creative ideas and creative ways to figure out how to do something.
 
+### Cheatsheet
+
+For a more thorough overview of what this workshop is about, you can check out [the wiki](https://github.com/pierredepaz/drawing-in-the-terminal/wiki/CHEATSHEET).
 
 ### Tools
 
