@@ -18,6 +18,7 @@ For a more thorough overview of what this workshop is about, you can check out [
 
 In this workshop, it is encouraged to use [Python3](https://www.python.org/download/releases/3.0/), as well as the following packages:
 - [blessings](https://pypi.python.org/pypi/blessings), a wrapper for curses, simplifying movement and color in the terminal.
+- [colorama](https://pypi.python.org/pypi/colorama/0.2.4), which basically does the same thing as blessings, but for Windows.
 - [noise](https://pypi.python.org/pypi/noise/1.2.2), an implementation of [Perlin noise](http://www.noisemachine.com/offline/).
 
 Both can be installed by running `pip install <nameofpackage>`.
